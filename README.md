@@ -4,6 +4,8 @@
 
 The guide for Ubuntu development environment setup.
 
+We suppose to use work and personal git repositories with different SSH keys and user emails.
+
 ---
 
 - [Chrome](#chrome)
