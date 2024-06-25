@@ -15,6 +15,7 @@ The guide for Ubuntu development environment setup.
 - [Git](#git)
     - [Name, email and line ending](#name-email-and-line-ending)
     - [Cleanup alias](#cleanup-alias)
+    - [Personal name and email](#personal-name-and-email)
 - [SSH keys](#ssh-keys)
     - [Permissions of keys](#permissions-of-keys)
 - [Composer](#composer)
@@ -102,7 +103,7 @@ gsettings set org.freedesktop.ibus.panel.emoji unicode-hotkey "['<Control><Super
 
 ### Default project directory
 
-Set `~home/<username>/projects`:
+Set `home/<username>/projects`:
 
 `PhpStorm > Settings > Appearance & Behavior > System Settings > Default directory`.
 
@@ -121,7 +122,7 @@ git -v
 
 ```
 git config --global user.name "John Doe"
-git config --global user.email "john.doe@example.com"
+git config --global user.email "john.doe@company.com"
 git config --global core.autocrlf input
 git config --list # results
 ```
@@ -136,11 +137,31 @@ git config --global alias.cleanup "!git branch --merged | grep  -v '\\*\\|master
 git cleanup # usage
 ```
 
-The alt method is to add into the `~home/<username>/.gitconfig` file:
+The alt method is to add into the `home/<username>/.gitconfig` file:
 
 ```
 [alias]
   cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|main\\|dev\\|develop\\|development\\|staging\\|stage' | xargs -n 1 git branch -d"
+```
+
+### Personal name and email
+
+If we are going to commit to work and personal repositories we need to set different emails for the git user.
+All personal project will be placed in the `home/<username>/projects/personal/` directory.
+
+We need to create the `home/<username>/.gitconfig-personal` file with personal email:
+
+```
+[user]
+  name = John Doe
+  email = john.doe@gmail.com
+```
+
+And update the default global git config `home/<username>/.gitconfig` by adding to the end:
+
+```
+[includeIf "gitdir:~/projects/personal/"]
+  path = ~/.gitconfig-personal
 ```
 
 ## SSH keys
@@ -331,9 +352,7 @@ sudo curl -L https://github.com/docker/compose/releases/download/${VERSION}/dock
 sudo chmod 755 $DESTINATION
 ```
 
-
 ---
-
 
 ## Preparing to migrate to another computer
 
