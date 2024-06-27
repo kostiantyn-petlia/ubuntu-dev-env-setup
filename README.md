@@ -29,6 +29,8 @@ We suppose to use work and personal git repositories with different SSH keys and
     - [Docker post-installation steps](#docker-post-installation-steps)
     - [Docker compose](#docker-compose)
 - [VPN](#vpn)
+  - [Network Manager plugins](#network-manager-plugins)
+  - [TunnelBear Chrome extension](#tunnelbear-chrome-extension)
 - [Preparing to migrate to another computer](#preparing-to-migrate-to-another-computer)
     - [Archive of the Home folder](#archive-of-the-home-folder)
     - [Save and sync PhpStorm settings](#save-and-sync-phpstorm-settings)
@@ -55,7 +57,7 @@ sudo apt update && sudo apt upgrade
 
 [Link](https://askubuntu.com/questions/1514599/how-do-i-install-google-chrome-on-ubuntu-24-04)
 
-If there is any issue preventing the GUI from loading, you can try starting the google-chrome application from terminal:
+If there is any issue preventing the GUI from loading, we can try starting the google-chrome application from terminal:
 
 ```
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -357,7 +359,10 @@ sudo chmod 755 $DESTINATION
 
 ## VPN
 
-You can install VPN plugins for default Network Manager and use them in `Settings > Network > VPN > +` or `Top bar > VPN`.
+### Network Manager plugins
+
+We can install VPN plugins for default Network Manager and use them in `Settings > Network > VPN > +`
+or `Top bar > VPN`.
 
 ```
 # Simple, but enough
@@ -369,6 +374,12 @@ sudo apt install network-manager-openconnect network-manager-openconnect-gnome
 # After installing the plugin, restart Network Manager
 sudo systemctl restart NetworkManager
 ```
+
+### TunnelBear Chrome extension
+
+[Link](https://chromewebstore.google.com/detail/tunnelbear-vpn/omdakjcmkglenbhjadbccaookpfjihpa?hl=en)
+
+We can use this free Chrome extension to change our county fast and simple.
 
 ---
 
