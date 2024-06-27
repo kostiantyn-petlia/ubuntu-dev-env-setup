@@ -1,10 +1,27 @@
 # Ubuntu 24.04 LTS: PHP Web Development Environment Setup
 
-**version 0.9.0**
+**version 0.9.1**
 
 The guide for Ubuntu development environment setup.
 
 We suppose to use work and personal git repositories with different SSH keys and user emails.
+
+---
+
+Do we migrate form an existing computer?
+See [Preparing to migrate to another computer](#preparing-to-migrate-to-another-computer).
+
+Do we are a newbie to Linux?
+See [Newbie to Linux](https://github.com/kostiantyn-petlia/ubuntu-dev-env-setup/NEWBIE-TO-LINUX.md).
+
+**Before starting**
+
+Update the package lists and then upgrade all installed packages on an Ubuntu system to their latest versions,
+ensuring the system is up-to-date with security patches and bug fixes.
+
+```
+sudo apt update && sudo apt upgrade
+```
 
 ---
 
@@ -29,8 +46,8 @@ We suppose to use work and personal git repositories with different SSH keys and
     - [Docker post-installation steps](#docker-post-installation-steps)
     - [Docker compose](#docker-compose)
 - [VPN](#vpn)
-  - [Network Manager plugins](#network-manager-plugins)
-  - [TunnelBear Chrome extension](#tunnelbear-chrome-extension)
+    - [Network Manager plugins](#network-manager-plugins)
+    - [TunnelBear Chrome extension](#tunnelbear-chrome-extension)
 - [Preparing to migrate to another computer](#preparing-to-migrate-to-another-computer)
     - [Archive of the Home folder](#archive-of-the-home-folder)
     - [Save and sync PhpStorm settings](#save-and-sync-phpstorm-settings)
@@ -38,18 +55,6 @@ We suppose to use work and personal git repositories with different SSH keys and
 - [Known Ubuntu 24.04 LTS issues](#known-ubuntu-2404-lts-issues)
     - [Screen lock issue](#screen-lock-issue)
     - [Thumbnails issue](#-thumbnails-issue)
-
----
-
-Do we migrate form an existing computer?
-See [Preparing to migrate to another computer](#preparing-to-migrate-to-another-computer).
-
-Update the package lists and then upgrade all installed packages on an Ubuntu system to their latest versions,
-ensuring the system is up-to-date with security patches and bug fixes.
-
-```
-sudo apt update && sudo apt upgrade
-```
 
 ---
 
