@@ -60,6 +60,8 @@ These commands cover basic file management, system information, networking, and 
 
 ## Command line interface (Terminal)
 
+The terminal is our friend. 
+
 Use `Ctrl+Alt+T` to open Terminal.
 
 To be continued...
