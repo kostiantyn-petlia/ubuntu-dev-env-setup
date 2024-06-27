@@ -28,6 +28,7 @@ We suppose to use work and personal git repositories with different SSH keys and
 - [Docker](#docker)
     - [Docker post-installation steps](#docker-post-installation-steps)
     - [Docker compose](#docker-compose)
+- [VPN](#vpn)
 - [Preparing to migrate to another computer](#preparing-to-migrate-to-another-computer)
     - [Archive of the Home folder](#archive-of-the-home-folder)
     - [Save and sync PhpStorm settings](#save-and-sync-phpstorm-settings)
@@ -352,6 +353,21 @@ VERSION=$(curl --silent https://api.github.com/repos/docker/compose/releases/lat
 DESTINATION=/usr/local/bin/docker-compose
 sudo curl -L https://github.com/docker/compose/releases/download/${VERSION}/docker-compose-$(uname -s)-$(uname -m) -o $DESTINATION
 sudo chmod 755 $DESTINATION
+```
+
+## VPN
+
+You can install VPN plugins for default Network Manager and use them in `Settings > Network > VPN > +` or `Top bar > VPN`.
+
+```
+# Simple, but enough
+sudo apt install network-manager-fortisslvpn network-manager-fortisslvpn-gnome
+
+# Advanced
+sudo apt install network-manager-openconnect network-manager-openconnect-gnome
+
+# After installing the plugin, restart Network Manager
+sudo systemctl restart NetworkManager
 ```
 
 ---
